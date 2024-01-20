@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Font Checker",
+  "version": "1.0",
+  "description": "Check and store the font of a webpage.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts.html", "fonts.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
