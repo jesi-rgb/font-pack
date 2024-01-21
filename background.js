@@ -2,7 +2,9 @@ function updateFontList(fontData) {
   chrome.storage.sync.get("fonts", function(data) {
     const fonts = data.fonts || [];
     const findInstances = fonts.findIndex(
-      (f) => f.font == fontData.font && fontData.href == f.href,
+      (f) =>
+        f.font == fontData.font &&
+        fontData.displayHostName == f.displayHostName,
     );
     if (findInstances == -1) {
       fontData.instances = 1;
