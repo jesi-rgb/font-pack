@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Font Checker",
-  "version": "1.0",
-  "description": "Check and store the font of a webpage.",
+  "version": "0.1",
+  "description": "Save all the fonts you run into in your fontpack!",
   "permissions": ["activeTab", "storage"],
   "action": {
     "default_icon": "icon.png",
@@ -11,9 +11,14 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "web_accessible_resources": [
     {
       "resources": ["fonts.html", "fonts.js"],
