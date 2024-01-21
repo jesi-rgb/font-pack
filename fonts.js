@@ -27,12 +27,14 @@ function displayFonts(fonts) {
         const li = document.createElement("li");
 
         const font = document.createElement("div");
+        font.classList = "title";
+        font.style = `font-family: ${fontData.font}, Helvetica`;
         font.textContent = fontData.instances + "x " + fontData.font;
 
         const href = document.createElement("a");
         href.href = fontData.href;
         href.id = "href";
-        href.textContent = fontData.href;
+        href.textContent = fontData.displayHostName;
 
         const date = document.createElement("div");
         date.id = "date";

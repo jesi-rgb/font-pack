@@ -1,4 +1,6 @@
 body {
+  font-family: "Amulya";
+  font-weight: 450;
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -9,12 +11,31 @@ h2 {
 }
 
 ul {
-  margin-left: 1rem;
-  font-size: 20px;
+  font-size: 1rem;
+  padding-left: 0px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  list-style: none;
 }
 
 li {
   margin-top: 10px;
+  border: 1px dashed tomato;
+  border-radius: 0.25rem;
+  padding: 0.5em;
+
+  transition: color 0.2s;
+  transition: border 0.2s;
+}
+
+li:hover {
+  border: 1px solid midnightblue;
+}
+
+p {
+  font-size: 1.1rem;
 }
 
 #href {
@@ -23,11 +44,18 @@ li {
 }
 
 #href:hover {
-  color: red;
+  color: midnightblue;
+}
+
+.title {
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 1em;
+  font-size: 1.1rem;
 }
 
 #date {
   font-style: italic;
   opacity: 0.5;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
 }

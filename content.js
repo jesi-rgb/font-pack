@@ -1,13 +1,15 @@
 const font = window
   .getComputedStyle(document.body)
   .fontFamily.split(",")[0]
-  .trim();
+  .trim()
+  .replace(/^[^a-z\d]*|[^a-z\d]*$/gi, "");
 
 chrome.runtime.sendMessage({
   action: "retrieveFont",
   packData: {
     font: font,
     packedAt: Date.now(),
-    href: window.location.hostname,
+    href: window.location.href,
+    displayHostName: window.location.hostname,
   },
 });
