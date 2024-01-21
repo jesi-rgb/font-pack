@@ -3,5 +3,11 @@ const font = window
   .fontFamily.split(",")[0]
   .trim();
 
-console.log("retrieving fonts");
-chrome.runtime.sendMessage({ action: "retrieveFont", font: font });
+chrome.runtime.sendMessage({
+  action: "retrieveFont",
+  packData: {
+    font: font,
+    packedAt: Date.now(),
+    href: window.location.hostname,
+  },
+});
