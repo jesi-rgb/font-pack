@@ -9,16 +9,40 @@
     />
   </head>
   <body>
-    <h2>Font Case</h2>
-    <p>
-      Sit back and enjoy the beautiful collection of fonts you've run into these
-      days. To add more, simply browse as usual. Font Case will pay attention
-      for you.
-    </p>
-    <p>
-      Fonts that you have installed on your computer will be displayed,
-      otherwise the old classic Helvetica will come in our rescue.
-    </p>
+    <div class="logo">
+      <img
+        class="logo-image"
+        width="32"
+        height="32"
+        src="images/fontcase_4.png"
+        alt=""
+      />
+      <h2>Font Case</h2>
+    </div>
+    <details>
+      <summary>How does Font Case work?</summary>
+      <p>
+        Font Case works automatically upon installing. You just surf the web, as
+        usual, and Font Case keeps track of every font you run into.
+      </p>
+      <p>
+        All the different fonts and the sites you found them will be gathered in
+        here.
+      </p>
+
+      <p>
+        Same fonts found on same sites will be grouped together. Same fonts
+        found in <em>different</em> sites will <b>not</b> be grouped together.
+      </p>
+      <p>
+        The list is sorted in inverse chronological order; last found, first.
+      </p>
+
+      <p>
+        If the font is installed in your computer, it will be displayed
+        properly; otherwise we fall back to our old trusty Helvetica.
+      </p>
+    </details>
     <ul id="fontList"></ul>
     <script src="fonts.js"></script>
     <button id="removeFonts">Reset fonts</button>

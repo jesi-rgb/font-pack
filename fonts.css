@@ -20,6 +20,20 @@ ul {
   list-style: none;
 }
 
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-image {
+  margin-right: 1em;
+}
+
+summary {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
 li {
   margin-top: 10px;
   border: 1px dashed tomato;
