@@ -1,24 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Font Pack",
+  "name": "Font Case",
   "version": "0.1",
-  "description": "Save all the fonts you run into in your fontpack!",
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
+  "description": "Save all the fonts you run into in your fontcase!",
+  "permissions": ["activeTab", "storage"],
+
+  "icons": {
+    "16": "images/fontcase.png",
+    "32": "images/fontcase_2.png",
+    "48": "images/fontcase_3.png",
+    "128": "images/fontcase_4.png"
+  },
   "action": {
-    "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ],
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
       "run_at": "document_end"
     }
   ],
@@ -28,13 +27,8 @@
   },
   "web_accessible_resources": [
     {
-      "resources": [
-        "fonts.html",
-        "fonts.js"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
+      "resources": ["fonts.html", "fonts.js"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
