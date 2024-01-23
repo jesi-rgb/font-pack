@@ -3,8 +3,11 @@
   "name": "Font Case",
   "version": "0.1",
   "description": "Save all the fonts you run into in your fontcase!",
-  "permissions": ["activeTab", "storage"],
-
+  "permissions": [
+    "activeTab",
+    "storage",
+    "<all_urls>"
+  ],
   "icons": {
     "16": "images/fontcase.png",
     "32": "images/fontcase_2.png",
@@ -16,8 +19,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_end"
     }
   ],
@@ -27,8 +31,10 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["fonts.html", "fonts.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "fonts.html",
+        "fonts.js"
+      ]
     }
   ]
 }
