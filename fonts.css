@@ -1,3 +1,10 @@
+:root {
+  --blue: rgba(50, 116, 191, 1);
+  --light-blue: rgba(115, 163, 218, 1);
+  --dark-blue: rgba(7, 33, 62, 1);
+  --hover-blue: rgba(115, 163, 218, 0.1);
+}
+
 body {
   font-family: "Amulya";
   font-weight: 450;
@@ -26,7 +33,12 @@ ul {
 }
 
 .highlight {
-  background: rgba(1, 1, 0, 0.1);
+  background: var(--hover-blue);
+}
+
+.highlight .title {
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
 .logo-image {
@@ -40,7 +52,7 @@ summary {
 
 li {
   margin-top: 10px;
-  border: 1px dashed tomato;
+  border: 1.5px dashed var(--dark-blue);
   border-radius: 0.25rem;
   padding: 0.5em;
 
@@ -49,7 +61,8 @@ li {
 }
 
 li:hover {
-  border: 1px solid midnightblue;
+  border: 1.5px dashed var(--light-blue);
+  transition: all 0.3s;
 }
 
 p {
@@ -57,12 +70,12 @@ p {
 }
 
 #href {
-  color: tomato;
+  color: var(--blue);
   transition: color 0.2s;
 }
 
 #href:hover {
-  color: midnightblue;
+  color: var(--dark-blue);
 }
 
 .title {

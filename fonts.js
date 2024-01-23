@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.getElementById("removeFonts").addEventListener("click", () => {
     chrome.storage.sync.set({ fonts: [] });
+    window.location.reload();
   });
 });
 
@@ -30,7 +31,7 @@ function displayFonts(fonts) {
 
         const font = document.createElement("div");
         font.classList = "title";
-        font.style = `font-family: ${fontData.font}, Helvetica`;
+        font.style = `font-family: ${fontData.font}, Amulya`;
         font.textContent = fontData.instances + "x " + fontData.font;
 
         const href = document.createElement("a");
