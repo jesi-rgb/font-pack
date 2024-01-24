@@ -4,9 +4,7 @@
   "version": "0.1",
   "description": "Save all the fonts you run into in your fontcase!",
   "permissions": [
-    "activeTab",
-    "storage",
-    "<all_urls>"
+    "storage"
   ],
   "icons": {
     "16": "images/fontcase.png",
@@ -22,7 +20,10 @@
       "js": [
         "content.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ],
   "background": {
@@ -34,6 +35,9 @@
       "resources": [
         "fonts.html",
         "fonts.js"
+      ],
+      "matches": [
+        "<all_urls>"
       ]
     }
   ]
