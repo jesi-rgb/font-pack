@@ -4,7 +4,8 @@
   "version": "0.1",
   "description": "Save all the fonts you run into in your fontcase!",
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab"
   ],
   "icons": {
     "16": "images/fontcase.png",
