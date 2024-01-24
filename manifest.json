@@ -20,7 +20,6 @@
       "js": [
         "content.js"
       ],
-      "run_at": "document_end",
       "matches": [
         "<all_urls>"
       ]
@@ -29,16 +28,5 @@
   "background": {
     "service_worker": "background.js",
     "type": "module"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "fonts.html",
-        "fonts.js"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ]
+  }
 }
